@@ -18,6 +18,7 @@ namespace Dungeon
 
 	GameObject::~GameObject()
 	{
+		mGame->RemoveGameObject(this);
 		while (!mComponents.empty())
 		{
 			delete mComponents.back();
